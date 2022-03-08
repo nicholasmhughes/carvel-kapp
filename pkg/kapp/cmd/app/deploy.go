@@ -96,7 +96,7 @@ func (o *DeployOptions) Run() error {
 		return err
 	}
 
-	err = app.CreateOrUpdate(appLabels)
+	err = app.CreateOrUpdate(appLabels, o.DiffFlags.Run)
 	if err != nil {
 		return err
 	}
